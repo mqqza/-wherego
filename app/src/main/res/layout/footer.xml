@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/button_send_background"
+        android:background="@drawable/button_send_selector"
         android:layout="@+id/txtType"
         android:onClick="addComment"
         android:text="Send"

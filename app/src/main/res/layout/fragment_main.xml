@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.wherego.soulq.wherego.CustomScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+
+                />
+
+            <ImageView
+                android:id="@+id/Fab"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignBottom="@id/slider"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="-40dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/fab_style"
+                android:clickable="true"
+                android:src="@drawable/ic_heart_outline_white" />
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/slider"
+                android:layout_margin="8dp"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAbout"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvName"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/background_text"
+                android:padding="4dp"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tvAbout"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="16dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvPlaces"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAbout" />
+
+                <android.widget.Space
+                    android:id="@+id/space"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/rvPlaces" />
+
+
+                <android.support.v7.widget.RecyclerView
+
+                    android:id="@+id/rvComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/space" />
+            </LinearLayout>
+
+            <android.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/LinearLayout" />
+
+        </RelativeLayout>
+
+    </com.wherego.soulq.wherego.CustomScrollView>
+
+    <include layout="@layout/footer" />
+
+
+</RelativeLayout>
